@@ -1,5 +1,5 @@
 def main():
-    pace = get_pace(miles = 24.2, Minutes = 180)
+    pace = get_pace(miles = 24.2, minutes = 180)
     print(f"You Need to Run each mile in {round(pace, 2)} Minutes. ")
 
 
