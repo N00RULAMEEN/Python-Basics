@@ -1,0 +1,19 @@
+import re
+
+locations = {"+1": "United States and Canada", "+62": "Indonesia", "+505": "Nicaragua"}
+
+def main():
+    pattern = r"(?P<country_code>\+\d{1,3}) \d{3}-\d{3}-\d{4}"
+    number = input("Number: ")
+
+    match = re.search(pattern, number)
+    if match:
+        country_code = match.group(1)
+        print(locations[country_code])
+    else:
+        print("Invalid")
+        
+main()
+# Note: To run the program, add the following at the end:
+# if __name__ == "__main__":
+    
